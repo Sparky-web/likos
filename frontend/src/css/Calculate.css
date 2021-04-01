@@ -1,0 +1,42 @@
+.calculate__select {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  text-align: center;
+}
+.calculate__select > * {
+  position: relative;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.calculate__select > * .image {
+  width: 100% !important;
+  height: 200px !important;
+}
+
+.calculate__steps .btn-group {
+  margin-top: 1rem;
+}
+
+.calculate__sizes .thickness {
+  margin-top: 1rem;
+}
+
+.calculate {
+  padding: 3rem 0;
+  max-width: 1200px;
+  margin: auto;
+}
+.calculate__paddings {
+  padding: 0 1.5rem;
+}
+
+.dialog {
+  text-align: center;
+}
+.dialog .MuiDialogActions-root {
+  justify-content: center;
+}
+
+/*# sourceMappingURL=Calculate.css.map */

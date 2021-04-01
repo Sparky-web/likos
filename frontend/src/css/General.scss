@@ -1,0 +1,275 @@
+@import "./Navbar";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+  font-family: Roboto, sans-serif;
+  font-size: 16px !important;
+  color: #FCF7FF;
+
+  --background-primary: white;
+  --background-secondary: rgb(44, 54, 94);
+  --text-primary: rgb(44, 54, 94);
+  --text-light: #FCF7FF;
+  --primary: #ff6b35;
+  --transparent-primary-backgorund: rgba(0, 0, 0, 0.7);
+  --text-secondary: rgba(252, 247, 255, 0.7);
+  --container-paddings: 3rem 1.5rem;
+
+  @media (max-width: 1024px) {
+    font-size: 14px !important;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+h2, h3, h4, h5, p {
+  //  margin: 0.5rem 0;
+}
+
+body {
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  background: var(--background-primary);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+
+.inputGroup span {
+  color: var(--text-secondary)
+}
+
+* {
+  box-sizing: border-box;
+}
+a {
+  color: var(--primary)
+}
+
+.navbar a, .btn a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gap8px {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.gap16px {
+  margin: -8px 0;
+
+  & > * {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+  }
+
+  & > *:first-child {
+    margin-left: 0 !important;
+  }
+
+  & > *:last-child {
+    margin-right: 0 !important;
+  }
+}
+
+.gap16px.rollup-on-mobile {
+  @media (max-width: 760px) {
+    margin: 0;
+    & > *:not(:first-child) {
+      margin: 1rem 0 0 0 !important;
+    }
+  }
+}
+
+.btn {
+  background: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid transparent;
+  outline: none;
+  font-size: 1rem;
+  top: 0;
+  color: inherit;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0 0 var(--primary);
+  font-family: 'Oswald', Roboto, monospace;
+  user-select: none;
+  width: fit-content;
+
+  transition: ease-in-out 300ms;
+
+  @media (max-width: 760px) {
+    width: 100%;
+  }
+}
+
+.btn:hover {
+  @media (min-width: 760px) {
+    background: var(--primary);
+    transform: translateY(-5%);
+    box-shadow: 0 2px 7px var(--primary);
+  }
+}
+
+.btn:disabled {
+  opacity: 0.5;
+
+  &:hover {
+    top: 0;
+    box-shadow: none;
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: var(--primary) !important;
+}
+
+.btn-primary {
+  color: var(--text-light) !important;
+  background: var(--primary);
+}
+
+.btn-group {
+  width: fit-content;
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+
+  @media (max-width: 400px) {
+    width: 100%;
+    grid-auto-flow: row;
+  }
+}
+
+section {
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: var(--container-paddings);
+}
+
+.two-cols {
+  display: flex;
+
+  & > * {
+    flex: 1
+  }
+}
+
+.two-grid-cols {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.rollup-on-mobile {
+  @media (max-width: 760px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid {
+  height: fit-content;
+  display: grid;
+}
+
+.fill-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.ml-3 {
+  margin-left: 1rem !important;
+}
+
+.ml-2 {
+  margin-left: 0.5rem !important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.calculate__results-table {
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--text-light);
+  }
+
+  tbody td {
+    width: 50%;
+  }
+}
+
+main {
+  min-height: 80vh;
+}
+
+.contacts {
+  .container {
+    min-height: 350px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 760px) {
+      min-height: initial;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.contacts__text {
+  max-width: fit-content;
+}
+
+.footer {
+  p {
+    margin: 0.5rem 0;
+  }
+
+  .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  background: #282825;
+  color: var(--text-secondary);
+}

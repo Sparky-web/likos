@@ -1,0 +1,54 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ликос | Плазменная резка металла",
+  "author": "'Sparky-web'",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "license": "0BSD",
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@reach/router": "^1.3.4",
+    "axios": "^0.21.1",
+    "formik": "^2.2.6",
+    "gatsby": "^2.26.1",
+    "gatsby-image": "^2.8.0",
+    "gatsby-plugin-image": "^1.1.0",
+    "gatsby-plugin-manifest": "^2.9.1",
+    "gatsby-plugin-minify": "^0.3.0",
+    "gatsby-plugin-nprogress": "^3.1.0",
+    "gatsby-plugin-offline": "^3.7.1",
+    "gatsby-plugin-preact": "^4.6.0",
+    "gatsby-plugin-react-helmet": "^3.9.0",
+    "gatsby-plugin-sass": "^2.8.0",
+    "gatsby-plugin-sharp": "^2.11.2",
+    "gatsby-plugin-sitemap": "^2.9.0",
+    "gatsby-source-filesystem": "^2.8.1",
+    "gatsby-source-graphql": "^2.11.0",
+    "gatsby-source-strapi": "^0.0.12",
+    "gatsby-source-wordpress-experimental": "^6.0.0",
+    "gatsby-transformer-sharp": "^2.9.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "universal-cookie": "^4.0.4",
+    "yup": "^0.32.8"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.18",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "yurnalist": "^2.1.0"
+  }
+}
