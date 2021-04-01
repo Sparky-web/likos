@@ -1,0 +1,71 @@
+{
+  "collectionName": "components_pages_landings",
+  "info": {
+    "name": "Landing",
+    "icon": "fire",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "headerImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "calculateHeaderText": {
+      "type": "string"
+    },
+    "calculateText": {
+      "type": "string"
+    },
+    "orderText": {
+      "type": "string"
+    },
+    "orderHeader": {
+      "type": "string"
+    },
+    "orderImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "aboutUsHeader": {
+      "type": "string"
+    },
+    "aboutUsText": {
+      "type": "string"
+    },
+    "aboutUsMedia": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "contactsHeader": {
+      "type": "string"
+    },
+    "contactsText": {
+      "type": "richtext"
+    }
+  }
+}

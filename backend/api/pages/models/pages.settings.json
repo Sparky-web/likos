@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "name": "Pages",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Content": {
+      "type": "dynamiczone",
+      "components": [
+        "pages.landing",
+        "pages.gallery"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}
