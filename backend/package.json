@@ -27,7 +27,6 @@
     "strapi-plugin-graphql": "^3.5.3",
     "strapi-plugin-upload": "3.5.3",
     "strapi-plugin-users-permissions": "3.5.3",
-    "strapi-plugin-video-thumbnail": "^0.1.2",
     "strapi-utils": "3.5.3",
     "telegraf": "^4.3.0"
   },
