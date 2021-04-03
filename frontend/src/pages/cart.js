@@ -27,6 +27,7 @@ import Paper from "@material-ui/core/Paper";
 import TableContainer from "@material-ui/core/TableContainer";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import SEO from "../templates/SEO";
+import {Link} from "gatsby"
 
 
 function CartPage(props) {
@@ -215,6 +216,7 @@ function Cart() {
             {isError && <Alert severity={"error"}>Произошла ошибка при загрузке корзины, попробуйте позже</Alert>}
             {!isError && !cart?.data?.length && <div>
                 <Alert severity={"info"}>Ваша корзина пуста</Alert>
+                <Link to={"/calculate"}><button className="btn btn-secondary mt-3">Добавить первый товар</button></Link>
             </div>}
         </Section>
     )

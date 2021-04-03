@@ -4,6 +4,9 @@
   gap: 1rem;
 }
 
+.gallery__full-image {
+  display: block !important;
+}
 .gallery__full-image .MuiDialog-paper {
   width: 90%;
   margin: 1rem !important;
@@ -61,6 +64,7 @@
   }
 }
 video {
+  width: 100%;
   max-width: 100%;
   height: 100%;
   object-fit: cover;

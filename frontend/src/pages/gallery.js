@@ -5,11 +5,15 @@ import "../css/Gallery.css"
 import {graphql} from "gatsby"
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
+import Contacts from "../components/Contacts";
+import {GatsbyImage, getImage, getSrcSet} from "gatsby-plugin-image";
 import Video from "../components/Video";
-import Contacts from "../components/landing/Contacts";
 
 function Gallery({data}) {
-    const {allStrapiPage: {edges: [{node: {Content: [{media}]}}]}} = data
+    // const {allStrapiPage: {edges: [{node: {Content: [{media}]}}]}} = data
+    let {allStrapiPage: {edges: [{node: {Content: [{images}]}}]}} = data;
+    images = images.map(el => el.image)
+    console.log(images)
 
     return (
         <Layout>
@@ -22,7 +26,7 @@ function Gallery({data}) {
                         программным
                         обеспечением. Наши специалисты имеют высокую квалификацию и большой опыт работы, поэтому
                         выполняют
-                        заказы на должном уровне и в кротчайшие сроки. Мы принимаем заказы любой сложности и по праву
+                        заказы на должном уровне и в кратчайшие сроки. Мы принимаем заказы любой сложности и по праву
                         гордимся безупречным качеством выполняемых работ.</p>
 
                     <div className={"mt-3"}>
@@ -30,10 +34,9 @@ function Gallery({data}) {
                 </Section>
                 <Section className={"gallery__wrap"}>
                     <div className={"gallery"}>
-                        {media.map((el, i) => <Media media={el} key={i} i={i}/>)}
+                        {images.map((el, i) => <Media image={el} key={i} i={i}/>)}
                     </div>
                 </Section>
-                <Contacts/>
             </div>
         </Layout>
     );
@@ -41,47 +44,49 @@ function Gallery({data}) {
 
 export default Gallery;
 
-const Media = ({media, i}) => {
+const Media = ({image: media, i}) => {
     const [open, setOpen] = useState(false)
-    const smallUrl = media?.formats?.small ? `${process.env.GATSBY_BACKEND_URL}${media.formats?.small?.url}` : `${process.env.GATSBY_BACKEND_URL}${media.url}`
-
+    const image = getImage(media)
+    const sizes = getSrcSet(media)?.split(",")
+    const previewSrc = sizes?.length > 1 ? sizes?.[1].split(" ")[0] : sizes?.[0].split(" ")[0]
 
     return (<div className={"gallery__media-container " + (i === 0 ? "tall" : i === 3 ? "wide" : "")}>
-        {new RegExp("video", "ig").test(media.mime) ?
-            <Video videoSrcURL={`${process.env.GATSBY_BACKEND_URL}${media.url}`}/> :
-            <img alt={""} src={`${smallUrl}`} onClick={() => setOpen(true)}/>
+        {media.ext !== ".mp4" ?
+            <img src={previewSrc} alt={""} onClick={() => setOpen(true)}/> :
+            <Video videoSrcURL={media.publicURL} videoTitle={"smth"}/>
         }
         <Dialog open={open} onClose={() => setOpen(false)} className={"gallery__full-image"}>
             <DialogContent>
-                <img alt={""} src={`${process.env.GATSBY_BACKEND_URL}${media.url}`}/>
+                <GatsbyImage image={image} alt={""} onClick={() => setOpen(true)} className={"gallery__full-image"}/>
             </DialogContent>
         </Dialog>
     </div>)
 }
 
+
 export const query = graphql`
-{
+query Gallery {
   allStrapiPage(filter: {name: {eq: "gallery"}}) {
     edges {
       node {
         name
         id
         Content {
-          media {
-            mime
-            url
-            formats {
-              small {
-                url
+          images {
+            image {
+              name
+              childImageSharp {
+                gatsbyImageData(
+                    placeholder: BLURRED
+                )
               }
-              thumbnail {
-                url
-              }
+              publicURL
+              ext
             }
           }
         }
       }
     }
   }
-}
+}   
 `

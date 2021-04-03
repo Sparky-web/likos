@@ -1,5 +1,4 @@
 
-
 .header {
   position: relative;
   color: var(--text-light);
@@ -47,9 +46,11 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
+
 .top-card {
   text-align: center;
 }
+
 .top-card__icon {
   font-size: 48px !important;
 }
@@ -64,10 +65,18 @@
     }
   }
 }
+
 .order__image {
   .gatsby-image-wrapper {
     width: 100% !important;
     height: 100% !important;
+  }
+
+  @media (min-width: 760px) {
+    position: relative;
+    .gatsby-image-wrapper {
+      position: absolute;
+    }
   }
 }
 

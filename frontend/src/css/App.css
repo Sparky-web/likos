@@ -68,6 +68,14 @@
   width: 100% !important;
   height: 100% !important;
 }
+@media (min-width: 760px) {
+  .order__image {
+    position: relative;
+  }
+  .order__image .gatsby-image-wrapper {
+    position: absolute;
+  }
+}
 
 .order__text h2 {
   font-size: xx-large;

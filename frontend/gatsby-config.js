@@ -8,7 +8,6 @@ module.exports = {
         siteUrl: `localhost:5000`
     },
     plugins: [
-        `gatsby-plugin-minify`,
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-sitemap",
         "gatsby-plugin-offline",
@@ -22,18 +21,17 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         {
-            resolve: "gatsby-source-filesystem",
+            resolve: `gatsby-source-filesystem`,
             options: {
-                name: "images",
-                path: "./src/images/",
+                name: `images`,
+                path: `${__dirname}/src/images/`,
             },
-            __key: "images",
         },
         {
             resolve: "gatsby-source-strapi",
             options: {
-                apiURL: process.env.GATSBY_BACKEND_URL || "http://localhost:1337",
-                contentTypes: ["gallery", "page"],
+                apiURL: process.env.GATSBY_BACKEND_URL || "http://192.168.0.107:1337",
+                contentTypes: ["page"],
                 queryLimit: 1000,
             },
         },

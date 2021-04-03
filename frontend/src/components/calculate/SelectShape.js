@@ -21,7 +21,7 @@ const SelectType = ({formik}) => {
             image: <StaticImage
                 className={"image"}
                 alt={"Круг"}
-                src={"../../images/calculate-circle.png"}
+                src="../../images/calculate-circle.png"
                 objectFit={"cover"}
                 placeholder={"blur"}
             />
