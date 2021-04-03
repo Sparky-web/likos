@@ -28,7 +28,7 @@ function Navbar() {
                             РАСЧИТАТЬ СТОИМОСТЬ
                         </button>
                     </Link>
-                    <Link to="/#contacts">
+                    <Link to="/contacts">
                         <button className="btn">
                             КОНТАКТЫ
                         </button>

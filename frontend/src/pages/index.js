@@ -62,7 +62,7 @@ const IndexPage = ({data}) => {
                     </div>
                 </div>
             </Section>
-            <Order header={content.formHeader} content={content.formText} formImage={content.formImage}/>
+            <Order header={"Оставьте заявку"} content={"Если у вас возникли вопросы, или же вы хотите сделать индивидуальный заказ - заполните эту форму, и наш мы свяжемся с вами в ближайшее время."} formImage={content.formImage}/>
             <Contacts header={content.header} content={content.content} maps={content.maps}/>
         </Layout>
     )
