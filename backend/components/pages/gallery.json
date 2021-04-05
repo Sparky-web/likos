@@ -7,16 +7,10 @@
   },
   "options": {},
   "attributes": {
-    "media": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.images"
     }
   }
 }

@@ -20,82 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19578033-2e72-4ebe-9125-1417d7c63e4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend_/src/pages/contacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env.development" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env.production" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gatsby-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/gatsby-browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gatsby-node.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CartContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/CartContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/Video.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/calculate/AdditionalParams.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/calculate/AdditionalParams.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/calculate/CheckboxField.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/calculate/CheckboxField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/calculate/Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/calculate/Results.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/calculate/SelectShape.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/calculate/SelectShape.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/calculate/Sizes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/calculate/Sizes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/calculate/calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/calculate/calculate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/calculate/formHelpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/calculate/formHelpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/calculate/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/calculate/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/img/about-us-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/img/about-us-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/img/about-us-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/img/about-us-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/img/calc-illustration.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/img/calc-illustration.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/img/calc.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/img/calc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/img/cart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/img/cart.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/img/headline.webp" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/img/headline.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/img/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/img/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/img/order.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/img/order.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/img/order.webp" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/img/order.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/landing/AppContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/landing/AppContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/landing/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/Contacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/landing/Field.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/landing/Field.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/landing/Headline.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/landing/Headline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/landing/Order.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/landing/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/components/landing/Section.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/App.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/App.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Calculate.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Calculate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Calculate.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Calculate.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Calculate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Calculate.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Cart.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Cart.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Cart.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Gallery.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Gallery.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Gallery.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Gallery.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Gallery.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/General.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/General.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/General.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/General.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/General.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/General.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Navbar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Navbar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Order.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Order.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Order.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Order.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/css/Order.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/css/Order.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/calculate-circle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/images/calculate-circle.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/calculate-circle.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/images/calculate-circle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/calculate-other.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/images/calculate-other.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/calculate-square.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/images/calculate-square.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/calculate-square.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/images/calculate-square.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/calculate-triangle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/images/calculate-triangle.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/calculate-triangle.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/images/calculate-triangle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/headline.webp" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/images/headline.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/images/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/pages/404.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/pages/calculate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/pages/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/pages/gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/templates/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/templates/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/templates/SEO.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_/src/templates/SEO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/gallery/config/routes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/gallery/controllers/gallery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/gallery/models/gallery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/gallery/models/gallery.settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/gallery/services/gallery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/pages/models/pages.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/pages/models/pages.settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/components/pages/gallery.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/components/pages/gallery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/components/pages/landing.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/components/pages/landing.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,13 +61,13 @@
     <property name="prettier.import.notification.dismissed" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Mx\Documents\likos\frontend_\src\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mx\Documents\likos\frontend_" />
       <recent name="C:\Users\Mx\Documents\likos\frontend_\src" />
       <recent name="C:\Users\Mx\Documents\likos\frontend\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mx\Documents\likos\frontend_\src\components" />
     </key>
   </component>
   <component name="SvnConfiguration">

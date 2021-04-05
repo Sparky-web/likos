@@ -15,7 +15,9 @@
       "type": "dynamiczone",
       "components": [
         "pages.landing",
-        "pages.gallery"
+        "pages.gallery",
+        "pages.contacts",
+        "pages.config"
       ]
     },
     "name": {

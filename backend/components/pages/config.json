@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_pages_configs",
+  "info": {
+    "name": "config",
+    "icon": "server"
+  },
+  "options": {},
+  "attributes": {
+    "metalPrice": {
+      "type": "string"
+    }
+  }
+}

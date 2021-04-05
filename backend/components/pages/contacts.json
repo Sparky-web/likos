@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_pages_contacts",
+  "info": {
+    "name": "contacts",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "contacts": {
+      "type": "richtext"
+    },
+    "formHeader": {
+      "type": "string"
+    },
+    "formText": {
+      "type": "text"
+    },
+    "mapsLink": {
+      "type": "string"
+    },
+    "formImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
