@@ -20,17 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19578033-2e72-4ebe-9125-1417d7c63e4c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/api/gallery/config/routes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/gallery/controllers/gallery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/gallery/models/gallery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/gallery/models/gallery.settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/gallery/services/gallery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/pages/models/pages.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/pages/models/pages.settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/components/pages/gallery.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/components/pages/gallery.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/components/pages/landing.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/components/pages/landing.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.production" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +73,7 @@
       <updated>1617389529235</updated>
       <workItem from="1617389533764" duration="270000" />
       <workItem from="1617429780023" duration="20459000" />
+      <workItem from="1617804864730" duration="16000" />
     </task>
     <servers />
   </component>
@@ -98,6 +90,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="345" y="403" key="#Prettier" timestamp="1617437825163">
