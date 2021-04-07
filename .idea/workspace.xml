@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="19578033-2e72-4ebe-9125-1417d7c63e4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.development" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.production" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/gatsby-config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,7 @@
       <updated>1617389529235</updated>
       <workItem from="1617389533764" duration="270000" />
       <workItem from="1617429780023" duration="20459000" />
-      <workItem from="1617804864730" duration="16000" />
+      <workItem from="1617804864730" duration="838000" />
     </task>
     <servers />
   </component>
