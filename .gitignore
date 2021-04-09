@@ -68,3 +68,5 @@ frontend/public
 .yarn-integrity
 .tmp
 build
+
+.idea
