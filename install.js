@@ -27,7 +27,6 @@ function ask(question) {
 
     await fs.writeFile(path.join(__dirname + "/frontend/.env"),
 `GATSBY_BACKEND_URL=http://localhost:${port}
-GATSBY_BUILD_URL=http://localhost:${port}
 `)
 
     await fs.writeFile(path.join(__dirname + "/backend/.env"),
