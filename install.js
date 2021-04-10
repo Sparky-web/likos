@@ -36,7 +36,7 @@ function ask(question) {
 
 
     const installModules = (path) => new Promise(res => {
-        const workerProcess = childProcess.exec(`cd ${path} && npm install`,function
+        const workerProcess = childProcess.exec(`cd ${path} && npm install --force`,function
             (error, stdout, stderr) {
 
             if (error) {
