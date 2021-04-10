@@ -3,6 +3,7 @@ const rimraf = require("rimraf");
 const path = require('path');
 const readline = require('readline');
 const childProcess = require("child_process")
+const report = require("yurnalist")
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -23,41 +24,35 @@ function ask(question) {
     await fs.mkdir(path.join(__dirname + "/backend/.tmp"))
     await fs.copyFile(path.join(__dirname + "/install-files/data.db"), path.join(__dirname + "/backend/.tmp/data.db"))
 
-    const port = await ask("Введите порт, на котором будет работать админ-панель (1337)") || 1337
+    const backendPort = await ask("Введите порт, на котором будет работать админ-панель (1337)") || 1337
 
     await fs.writeFile(path.join(__dirname + "/frontend/.env"),
-`GATSBY_BACKEND_URL=http://localhost:${port}
+`GATSBY_BACKEND_URL=http://localhost:${backendPort}
 `)
 
     await fs.writeFile(path.join(__dirname + "/backend/.env"),
-`PORT=${port}
+`PORT=${backendPort}
 `)
 
 
-
     const installModules = (path) => new Promise(res => {
-        const workerProcess = childProcess.exec(`cd ${path} && npm install --force`,function
-            (error, stdout, stderr) {
-
-            if (error) {
-                console.log(error.stack);
-                console.log('Error code: '+error.code);
-                console.log('Signal received: '+error.signal);
-            }
-            console.log('stdout: ' + stdout);
-            console.log('stderr: ' + stderr);
-        });
+        const workerProcess = childProcess.exec(`cd ${path} && npm install --force`);
         workerProcess.on('exit', function (code) {
-            console.log(`Установка пакетов npm для папки ${path} завершена с кодом: ${code}`);
+            report.warn(`Установка пакетов npm для папки ${path} завершена с кодом: ${code}`);
             res()
         });
     })
 
-    console.log("Установка пакетов npm для папки frontend... <o/")
+    const spinner = report.activity();
+    spinner.tick("Установка пакетов npm для папки frontend...")
+    report.warn('Это может занять некоторое время.');
     await installModules("frontend")
 
-    console.log("Установка пакетов npm для папки backend... \\o>")
+    spinner.tick("Установка пакетов npm для папки backend...")
+    report.warn('Это тоже может занять некоторое время.');
     await installModules("backend")
+
+    spinner.end();
 
     const shouldStart = await ask("Установка завершена, запустить start.js? (y/N)" )
         .then(s => s.toLowerCase())

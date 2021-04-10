@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Sparky-web/likos#readme",
   "dependencies": {
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "yurnalist": "^2.1.0"
   }
 }
