@@ -24,8 +24,7 @@
 
 .navbar__container {
   max-width: 1200px;
-  height: 10vh;
-  min-height: 100px;
+  height: 80px;
   margin: auto;
   display: flex;
   align-content: center;

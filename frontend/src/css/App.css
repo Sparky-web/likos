@@ -4,12 +4,11 @@
 }
 
 .headline {
+  padding: 6rem 0;
   display: grid;
   align-items: center;
   align-content: center;
   gap: 1rem;
-  height: 90vh;
-  min-height: 500px;
   background: linear-gradient(-262.14deg, #000000 -2.27%, rgba(0, 0, 0, 0.675608) 39.38%, rgba(255, 255, 255, 0) 102.79%);
 }
 .headline .btn {
@@ -79,6 +78,25 @@
 
 .order__text h2 {
   font-size: xx-large;
+}
+
+@media (max-width: 600px) {
+  .container {
+    text-align: center;
+  }
+
+  .headline__content h1 {
+    font-size: 1.75rem;
+  }
+
+  .headline {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 4rem 0;
+  }
+
+  .btn {
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
