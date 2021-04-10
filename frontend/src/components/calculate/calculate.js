@@ -1,27 +1,9 @@
+import {thickness} from "./formHelpers";
+
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const thickness = [
-    {thickness: 2, cuttingPrice: 28, holePrice: 7},
-    {thickness: 3, cuttingPrice: 39, holePrice: 10},
-    {thickness: 6, cuttingPrice: 68, holePrice: 16.8},
-    {thickness: 8, cuttingPrice: 82, holePrice: 20.2},
-    {thickness: 10, cuttingPrice: 90, holePrice: 22},
-    {thickness: 12, cuttingPrice: 107, holePrice: 25.3},
-    {thickness: 14, cuttingPrice: 113, holePrice: 26.6},
-    {thickness: 16, cuttingPrice: 124, holePrice: 30},
-    {thickness: 18, cuttingPrice: 130, holePrice: 30.7},
-    {thickness: 20, cuttingPrice: 170, holePrice: 40},
-    {thickness: 22, cuttingPrice: 192, holePrice: 44.4},
-    {thickness: 25, cuttingPrice: 226, holePrice: 52.2},
-    {thickness: 30, cuttingPrice: 260, holePrice: 60},
-    {thickness: 32, cuttingPrice: 305, holePrice: 70.5},
-    {thickness: 35, cuttingPrice: 373, holePrice: 86.1},
-    {thickness: 40, cuttingPrice: 452, holePrice: 104.4},
-    {thickness: 45, cuttingPrice: 542, holePrice: 125.2},
-    {thickness: 50, cuttingPrice: 644, holePrice: 148.7},
-]
 const getThicknessPrice = (_thickness) => {
     for (let i = 0; i < thickness.length; i++) {
         if (thickness[i].thickness === _thickness) return thickness[i]

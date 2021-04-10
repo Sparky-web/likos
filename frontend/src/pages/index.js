@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../templates/Layout";
 import "../css/App.css"
 import {graphql, Link} from "gatsby";
-import {GatsbyImage, getImage, StaticImage} from "gatsby-plugin-image";
+import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import Headline from "../components/landing/Headline";
 import Section from "../components/landing/Section";
 import AccessibilityNewIcon from "@material-ui/icons/AccessibilityNew";
@@ -22,10 +22,10 @@ const IndexPage = ({data}) => {
     return (
         <Layout>
             <div className="header">
-                <GatsbyImage 
-                             alt={""}
-                             placeholder={"blurred"}
-                             className={"headline__background"} image={image}/>
+                <GatsbyImage
+                    alt={""}
+                    placeholder={"blurred"}
+                    className={"headline__background"} image={image}/>
                 <Headline/>
             </div>
             <Section>
@@ -62,7 +62,9 @@ const IndexPage = ({data}) => {
                     </div>
                 </div>
             </Section>
-            <Order header={"Оставьте заявку"} content={"Если у вас возникли вопросы, или же вы хотите сделать индивидуальный заказ - заполните эту форму, и наш мы свяжемся с вами в ближайшее время."} formImage={content.formImage}/>
+            <Order header={"Оставьте заявку"}
+                   content={"Если у вас возникли вопросы, или же вы хотите сделать индивидуальный заказ - заполните эту форму, и наш мы свяжемся с вами в ближайшее время."}
+                   formImage={content.formImage}/>
             <Contacts header={content.header} content={content.content} maps={content.maps}/>
         </Layout>
     )

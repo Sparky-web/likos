@@ -14,13 +14,13 @@ function Navbar() {
     return (
         <nav className={["navbar", isOpened && "navbar__container__opened"].join(" ")}>
             <div className="navbar__container">
-                <div className="navbar__logo">
+                <Link to="/" className="navbar__logo">
                     ЛИКОС
-                </div>
+                </Link>
                 <div className={["navbar__menu-container", "navbar__menu", isOpened && "navbar__opened"].join(" ")}>
-                    <Link to="/">
+                    <Link to="/price">
                         <button className="btn">
-                            ГЛАВНАЯ
+                            Прайс
                         </button>
                     </Link>
                     <Link to="/calculate">

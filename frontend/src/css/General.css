@@ -310,6 +310,12 @@ section {
   display: flex;
 }
 
+.calculate__results-table {
+  width: 100%;
+}
+.calculate__results-table thead * {
+  font-weight: bold;
+}
 .calculate__results-table table {
   border-collapse: collapse;
   width: 100%;
@@ -322,10 +328,6 @@ section {
 .calculate__results-table tr:nth-child(even) {
   background-color: var(--text-light);
 }
-.calculate__results-table tbody td {
-  width: 50%;
-}
-
 main {
   min-height: 80vh;
 }

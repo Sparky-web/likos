@@ -214,6 +214,10 @@ section {
 }
 
 .calculate__results-table {
+  width: 100%;
+  thead * {
+    font-weight: bold;
+  }
   table {
     border-collapse: collapse;
     width: 100%;
@@ -230,7 +234,6 @@ section {
   }
 
   tbody td {
-    width: 50%;
   }
 }
 
