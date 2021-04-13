@@ -97,6 +97,12 @@ export const getResultTable = (results) => {
                     rawValue: results.metalPrice
                 },
                 {
+                    name: "Цена резки (за 1 шт.)",
+                    data: `${results.cuttingPricePerUnit} ₽`,
+                    rawName: "cuttingPricePerUnit",
+                    rawValue: results.cuttingPrice
+                },
+                {
                     name: "Вес изделия",
                     data: `${results.weight} кг.`,
                     rawName: "weight",
