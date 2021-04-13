@@ -18,16 +18,37 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogContent from "@material-ui/core/DialogContent";
 import {CartContext} from "../CartContext";
-import {Link} from "gatsby";
+import {graphql, Link, useStaticQuery} from "gatsby";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Alert from "@material-ui/lab/Alert";
 
 export default function Calculator() {
+    const data = useStaticQuery(graphql`
+    query ConfigQuery {
+      allStrapiPage(filter: {name: {eq: "config"}}) {
+        edges {
+          node {
+            name
+            id
+            Content {
+                metalPrice
+            }
+          }
+        }
+      }
+    }
+  `)
+    const {allStrapiPage: {edges: [{node: {Content: [content]}}]}} = data
+    console.log(content)
+
+
     const steps = [
         "Выберете тип изделия",
         "Укажите размеры",
         "Дополнительные параметры"
     ]
+
+
 
     const [activeStep, setActiveStep] = React.useState(0);
     const [history, setHistory] = React.useState([0])
@@ -41,7 +62,7 @@ export default function Calculator() {
     const formik = useFormik({
         ...properties,
         onSubmit: values => {
-            setItem(getResultTable(calculate(values)))
+            setItem(getResultTable(calculate({...values, metalPrice: content.metalPrice})))
         }
     })
 
