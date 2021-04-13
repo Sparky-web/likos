@@ -39,7 +39,6 @@ export default function Calculator() {
     }
   `)
     const {allStrapiPage: {edges: [{node: {Content: [content]}}]}} = data
-    console.log(content)
 
 
     const steps = [
@@ -47,7 +46,6 @@ export default function Calculator() {
         "Укажите размеры",
         "Дополнительные параметры"
     ]
-
 
 
     const [activeStep, setActiveStep] = React.useState(0);
