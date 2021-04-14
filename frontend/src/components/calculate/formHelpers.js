@@ -52,7 +52,6 @@ export const initialValues = {
     autoAdd: false,
     bolt: 0,
     boltAmount: 0,
-    metalPrice: 70519,
     holeWide: 0,
     trianglesAmount: 4,
 

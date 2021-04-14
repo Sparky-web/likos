@@ -59,8 +59,12 @@ export default function Calculator() {
 
     const formik = useFormik({
         ...properties,
+        initialValues: {
+            ...properties.initialValues,
+            metalPrice: content.metalPrice || 70000
+        },
         onSubmit: values => {
-            setItem(getResultTable(calculate({...values, metalPrice: content.metalPrice})))
+            setItem(getResultTable(calculate(values)))
         }
     })
 
