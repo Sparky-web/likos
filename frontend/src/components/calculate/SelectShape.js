@@ -13,7 +13,9 @@ const SelectType = ({formik}) => {
                 src={"../../images/calculate-square.png"}
                 objectFit={"cover"}
                 placeholder={"blur"}
-            />
+            />,
+            paramsToChange: {thickness: 10}
+
         },
         {
             name: "Круг (фланец)",
@@ -24,7 +26,9 @@ const SelectType = ({formik}) => {
                 src="../../images/calculate-circle.png"
                 objectFit={"cover"}
                 placeholder={"blur"}
-            />
+            />,
+            paramsToChange: {thickness: 10}
+
         },
         {
             name: "Косынка",
@@ -35,7 +39,8 @@ const SelectType = ({formik}) => {
                 src={"../../images/calculate-triangle.png"}
                 objectFit={"cover"}
                 placeholder={"blur"}
-            />
+            />,
+            paramsToChange: {thickness: 6}
         },
         {
             name: "Другое",
@@ -46,14 +51,20 @@ const SelectType = ({formik}) => {
                 src={"../../images/calculate-other.jpg"}
                 objectFit={"contain"}
                 placeholder={"blur"}
-            />
+            />,
+            paramsToChange: {}
         }
     ])
 
     return (
         <div className="calculate__select">
             {shapes.current.map(el => (
-                <Paper onClick={() => formik.setFieldValue("shape", el.value)}
+                <Paper onClick={() => {
+                    Object.keys(el.paramsToChange).forEach(param => {
+                        formik.setFieldValue(param, el.paramsToChange[param])
+                    })
+                    formik.setFieldValue("shape", el.value)
+                }}
                        key={el.value}
                        elevation={el.value === formik.values.shape ? 3 : 0}>
                     {el.image}
