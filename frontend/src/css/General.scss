@@ -277,3 +277,11 @@ main {
   background: #282825;
   color: var(--text-secondary);
 }
+
+.order__image {
+  img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+}

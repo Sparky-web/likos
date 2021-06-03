@@ -1,7 +1,8 @@
 import React, {useContext, useState} from 'react';
 import {CartContext} from "./CartContext";
-import {Link} from "gatsby";
+import {graphql, Link, useStaticQuery} from "gatsby";
 import Badge from "@material-ui/core/Badge";
+import {swap} from "formik";
 
 function Navbar() {
 
@@ -10,6 +11,33 @@ function Navbar() {
 
     const {cart} = useContext(CartContext)
 
+    const data = useStaticQuery(graphql`
+    query {
+  allStrapiPage(filter: {name: {eq: "page"}}) {
+    edges {
+       node {
+         name
+           Content {
+             title
+             pageName
+             content
+          }
+        }
+      }
+    }    
+  }
+    `)
+
+    const items = data?.allStrapiPage?.edges?.map(({node}) => {
+        const content = node?.Content[0]
+        return (
+            <Link to={`/${content.pageName}`}>
+                <button className="btn">
+                    {content.title}
+                </button>
+            </Link>
+        )
+    })
 
     return (
         <nav className={["navbar", isOpened && "navbar__container__opened"].join(" ")}>
@@ -38,6 +66,7 @@ function Navbar() {
                             О нас
                         </button>
                     </Link>
+                    {items}
 
                     <Link to={"/cart"}>
                         <button className={"btn"}>
