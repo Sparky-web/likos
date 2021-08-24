@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../templates/Layout";
 import "../css/App.css"
 import {graphql, Link} from "gatsby";
-import {GatsbyImage, getImage} from "gatsby-plugin-image";
+import {GatsbyImage, getImage, StaticImage} from "gatsby-plugin-image";
 import Headline from "../components/landing/Headline";
 import Section from "../components/landing/Section";
 import AccessibilityNewIcon from "@material-ui/icons/AccessibilityNew";
@@ -41,13 +41,19 @@ const IndexPage = ({data}) => {
                         </p>
                     </div>
                     <div className="top-card">
-                        <BuildIcon className={"top-card__icon"}/>
+                        <StaticImage
+                            className={"top-card__icon"}
+                            alt={"Сварка"}
+                            src={"../images/welding.svg"}
+                            objectFit={"contain"}
+                            placeholder={"blur"}
+                            style={{width: "72px"}}
+                        />
                         <h3 className="top-card__header">
-                            Современное оборудование
+                            Полный цикл металообработки
                         </h3>
                         <p>
-                            В работе мы используем только современное оборудование, это
-                            обеспечивает точность реза и минимальное количество брака.
+                            От проектирования до покраски
                         </p>
                     </div>
                     <div className="top-card">

@@ -30,9 +30,9 @@ module.exports = {
         {
             resolve: "gatsby-source-strapi",
             options: {
-                apiURL: process.env.GATSBY_BACKEND_URL
-                    ? process.env.GATSBY_BACKEND_URL.replace(/https/ig, "http")
-                    : "http://localhost:1337",
+                apiURL: process.env.GATSBY_BACKEND_URL,
+                    // ? process.env.GATSBY_BACKEND_URL.replace(/https/ig, "http")
+                    // : "http://localhost:1337",
                 contentTypes: ["page"],
                 queryLimit: 1000,
             },
