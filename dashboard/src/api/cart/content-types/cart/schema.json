@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carts",
+  "info": {
+    "singularName": "cart",
+    "pluralName": "carts",
+    "displayName": "cart",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "type": "json"
+    },
+    "sum": {
+      "type": "integer"
+    },
+    "cuttingSum": {
+      "type": "integer"
+    },
+    "metalSum": {
+      "type": "integer"
+    }
+  }
+}

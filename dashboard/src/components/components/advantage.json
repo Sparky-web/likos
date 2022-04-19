@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_advantages",
+  "info": {
+    "displayName": "advantage",
+    "icon": "plus-circle"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

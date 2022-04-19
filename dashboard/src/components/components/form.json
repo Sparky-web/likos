@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_components_forms",
+  "info": {
+    "displayName": "form",
+    "icon": "envelope-open-text"
+  },
+  "options": {},
+  "attributes": {
+    "mapsLink": {
+      "type": "string"
+    },
+    "formHeader": {
+      "type": "string"
+    },
+    "formText": {
+      "type": "text"
+    },
+    "formImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
