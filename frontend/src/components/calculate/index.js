@@ -61,7 +61,7 @@ export default function Calculator() {
         ...properties,
         initialValues: {
             ...properties.initialValues,
-            metalPrice: content.metalPrice || 70000
+            metalPrice: content.metalPrice || 90000
         },
         onSubmit: values => {
             setItem(getResultTable(calculate(values)))
