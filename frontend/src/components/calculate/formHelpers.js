@@ -19,7 +19,7 @@ export const thickness = [
     {thickness: 40, cuttingPrice: 452, holePrice: 104.4},
     {thickness: 45, cuttingPrice: 542, holePrice: 125.2},
     {thickness: 50, cuttingPrice: 644, holePrice: 148.7},
-].map(e => ({...e, cuttingPrice: e.cuttingPrice * 1.2, holePrice: e.holePrice * 1.2}))
+].map(e => ({...e, cuttingPrice: Math.round(e.cuttingPrice * 1.2), holePrice: Math.round(e.holePrice * 1.2)}))
 
 
 export const messages = {
