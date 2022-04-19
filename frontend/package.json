@@ -9,6 +9,7 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "*",
     "axios": "^0.21.1",
+    "deepmerge": "^4.2.2",
     "formik": "^2.2.6",
     "gatsby": "^3.2.1",
     "gatsby-plugin-gatsby-cloud": "^2.2.0",
