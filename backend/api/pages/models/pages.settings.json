@@ -17,7 +17,8 @@
         "pages.landing",
         "pages.gallery",
         "pages.contacts",
-        "pages.config"
+        "pages.config",
+        "pages.content-page"
       ]
     },
     "name": {

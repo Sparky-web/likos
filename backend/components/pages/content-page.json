@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_pages_content_pages",
+  "info": {
+    "name": "content-page",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "pageName": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

@@ -201,6 +201,40 @@ type deleteCartPayload {
   cart: Cart
 }
 
+type Config {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  pog: Boolean
+  published_at: DateTime
+}
+
+input ConfigInput {
+  pog: Boolean
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input editConfigInput {
+  pog: Boolean
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input updateConfigInput {
+  data: editConfigInput
+}
+
+type updateConfigPayload {
+  config: Config
+}
+
+type deleteConfigPayload {
+  config: Config
+}
+
 type Orders {
   id: ID!
   created_at: DateTime!
@@ -333,7 +367,7 @@ type deleteOrderPayload {
   order: Orders
 }
 
-union PagesContentDynamicZone = ComponentPagesLanding | ComponentPagesGallery | ComponentPagesContacts | ComponentPagesConfig
+union PagesContentDynamicZone = ComponentPagesLanding | ComponentPagesGallery | ComponentPagesContacts | ComponentPagesConfig | ComponentPagesContentPage
 
 """Input type for dynamic zone Content of Pages"""
 scalar PagesContentDynamicZoneInput
@@ -1036,6 +1070,26 @@ input editComponentPagesContactInput {
   formImage: ID
 }
 
+type ComponentPagesContentPage {
+  id: ID!
+  pageName: String
+  title: String
+  content: String
+}
+
+input ComponentPagesContentPageInput {
+  pageName: String
+  title: String
+  content: String
+}
+
+input editComponentPagesContentPageInput {
+  id: ID
+  pageName: String
+  title: String
+  content: String
+}
+
 type ComponentPagesGallery {
   id: ID!
   images: [ComponentComponentsImages]
@@ -1092,6 +1146,7 @@ type Query {
   cart(id: ID!, publicationState: PublicationState): Cart
   carts(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState): [Cart]
   cartsConnection(sort: String, limit: Int, start: Int, where: JSON): CartConnection
+  config(publicationState: PublicationState): Config
   order(id: ID!, publicationState: PublicationState): Orders
   orders(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState): [Orders]
   ordersConnection(sort: String, limit: Int, start: Int, where: JSON): OrdersConnection
@@ -1117,6 +1172,8 @@ type Mutation {
   createCart(input: createCartInput): createCartPayload
   updateCart(input: updateCartInput): updateCartPayload
   deleteCart(input: deleteCartInput): deleteCartPayload
+  updateConfig(input: updateConfigInput): updateConfigPayload
+  deleteConfig: deleteConfigPayload
   createOrder(input: createOrderInput): createOrderPayload
   updateOrder(input: updateOrderInput): updateOrderPayload
   deleteOrder(input: deleteOrderInput): deleteOrderPayload
