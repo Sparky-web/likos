@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../templates/Layout";
 import "../css/App.css"
 import {graphql, Link} from "gatsby";
-import {GatsbyImage, getImage} from "gatsby-plugin-image";
+import {GatsbyImage, getImage, StaticImage} from "gatsby-plugin-image";
 import Headline from "../components/landing/Headline";
 import Section from "../components/landing/Section";
 import AccessibilityNewIcon from "@material-ui/icons/AccessibilityNew";
@@ -41,13 +41,19 @@ const IndexPage = ({data}) => {
                         </p>
                     </div>
                     <div className="top-card">
-                        <BuildIcon className={"top-card__icon"}/>
+                        <StaticImage
+                            className={"top-card__icon"}
+                            alt={"Сварка"}
+                            src={"../images/welding.svg"}
+                            objectFit={"contain"}
+                            placeholder={"blur"}
+                            style={{width: "72px"}}
+                        />
                         <h3 className="top-card__header">
-                            Современное оборудование
+                            Полный цикл металообработки
                         </h3>
                         <p>
-                            В работе мы используем современный "название станка" вместе с "название резщика", это
-                            обеспечивает точность реза и минимальное количество брака.
+                            Заказывая у нас изготовление изделий в комплексе, вы не только экономите на транспортных расходах, но и существенно сокращаете сроки производства, потому что мы начинаем варить с первого дня заказа (с первой готовой детали).
                         </p>
                     </div>
                     <div className="top-card">
@@ -63,7 +69,7 @@ const IndexPage = ({data}) => {
                 </div>
             </Section>
             <Order header={"Оставьте заявку"}
-                   content={"Если у вас возникли вопросы, или же вы хотите сделать индивидуальный заказ - заполните эту форму, и наш мы свяжемся с вами в ближайшее время."}
+                   content={"Если у вас возникли вопросы, или же вы хотите сделать индивидуальный заказ - заполните эту форму, и мы свяжемся с вами в ближайшее время."}
                    formImage={content.formImage}/>
             <Contacts header={content.header} content={content.content} maps={content.maps}/>
         </Layout>

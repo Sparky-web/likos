@@ -27,7 +27,7 @@ const CssTextField = withStyles({
 })(Field);
 
 function ContactForm({formImage, header, content}) {
-    const image = getImage(formImage)
+    const image = typeof formImage === "string" ? formImage : getImage(formImage);
     const [successMessage, setSuccessMessage] = useState("")
 
     const formik = useFormik({
@@ -83,7 +83,8 @@ function ContactForm({formImage, header, content}) {
                 </form>
             </div>
             <div className="order__image">
-                <GatsbyImage image={image} alt={""} objectFit={"cover"} objectPosition={"center"}/>
+                {typeof image === "string" ? <img src={image} alt=""/> : <GatsbyImage image={image} alt={""} objectFit={"cover"} objectPosition={"center"}/>}
+
             </div>
         </Section>
     );
