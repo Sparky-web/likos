@@ -187,6 +187,40 @@ type deleteCartPayload {
   cart: Cart
 }
 
+type Config {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  pog: Boolean
+  published_at: DateTime
+}
+
+input ConfigInput {
+  pog: Boolean
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input editConfigInput {
+  pog: Boolean
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input updateConfigInput {
+  data: editConfigInput
+}
+
+type updateConfigPayload {
+  config: Config
+}
+
+type deleteConfigPayload {
+  config: Config
+}
+
 type Orders {
   id: ID!
   created_at: DateTime!
@@ -305,7 +339,7 @@ type deleteOrderPayload {
   order: Orders
 }
 
-union PagesContentDynamicZone = ComponentPagesLanding | ComponentPagesGallery | ComponentPagesContacts | ComponentPagesConfig
+union PagesContentDynamicZone = ComponentPagesLanding | ComponentPagesGallery | ComponentPagesContacts | ComponentPagesConfig | ComponentPagesContentPage
 
 """Input type for dynamic zone Content of Pages"""
 scalar PagesContentDynamicZoneInput
@@ -929,6 +963,26 @@ input editComponentPagesContactInput {
   formImage: ID
 }
 
+type ComponentPagesContentPage {
+  id: ID!
+  pageName: String
+  title: String
+  content: String
+}
+
+input ComponentPagesContentPageInput {
+  pageName: String
+  title: String
+  content: String
+}
+
+input editComponentPagesContentPageInput {
+  id: ID
+  pageName: String
+  title: String
+  content: String
+}
+
 type ComponentPagesGallery {
   id: ID!
   images: [ComponentComponentsImages]
@@ -963,7 +1017,7 @@ input editComponentPagesLandingInput {
   advantages: [editComponentComponentsAdvantageInput]
 }
 
-union Morph = UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsLoginPayload | UserPermissionsPasswordPayload | Cart | CartConnection | CartAggregator | CartAggregatorSum | CartAggregatorAvg | CartAggregatorMin | CartAggregatorMax | CartGroupBy | CartConnectionId | CartConnectionCreated_at | CartConnectionUpdated_at | CartConnectionData | CartConnectionSum | CartConnectionCuttingSum | CartConnectionMetalSum | CartConnectionPublished_at | createCartPayload | updateCartPayload | deleteCartPayload | Orders | OrdersConnection | OrdersAggregator | OrdersGroupBy | OrdersConnectionId | OrdersConnectionCreated_at | OrdersConnectionUpdated_at | OrdersConnectionName | OrdersConnectionComment | OrdersConnectionOrder | OrdersConnectionEmail | OrdersConnectionPublished_at | createOrderPayload | updateOrderPayload | deleteOrderPayload | Pages | PagesConnection | PagesAggregator | PagesGroupBy | PagesConnectionId | PagesConnectionCreated_at | PagesConnectionUpdated_at | PagesConnectionName | PagesConnectionPublished_at | createPagePayload | updatePagePayload | deletePagePayload | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileAggregatorSum | UploadFileAggregatorAvg | UploadFileAggregatorMin | UploadFileAggregatorMax | UploadFileGroupBy | UploadFileConnectionId | UploadFileConnectionCreated_at | UploadFileConnectionUpdated_at | UploadFileConnectionName | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionWidth | UploadFileConnectionHeight | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | deleteFilePayload | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole | createUserPayload | updateUserPayload | deleteUserPayload | ComponentComponentsAdvantages | ComponentComponentsImages | ComponentPagesConfig | ComponentPagesContacts | ComponentPagesGallery | ComponentPagesLanding
+union Morph = UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsLoginPayload | UserPermissionsPasswordPayload | Cart | CartConnection | CartAggregator | CartAggregatorSum | CartAggregatorAvg | CartAggregatorMin | CartAggregatorMax | CartGroupBy | CartConnectionId | CartConnectionCreated_at | CartConnectionUpdated_at | CartConnectionData | CartConnectionSum | CartConnectionCuttingSum | CartConnectionMetalSum | CartConnectionPublished_at | createCartPayload | updateCartPayload | deleteCartPayload | Config | updateConfigPayload | deleteConfigPayload | Orders | OrdersConnection | OrdersAggregator | OrdersGroupBy | OrdersConnectionId | OrdersConnectionCreated_at | OrdersConnectionUpdated_at | OrdersConnectionName | OrdersConnectionComment | OrdersConnectionOrder | OrdersConnectionEmail | OrdersConnectionPublished_at | createOrderPayload | updateOrderPayload | deleteOrderPayload | Pages | PagesConnection | PagesAggregator | PagesGroupBy | PagesConnectionId | PagesConnectionCreated_at | PagesConnectionUpdated_at | PagesConnectionName | PagesConnectionPublished_at | createPagePayload | updatePagePayload | deletePagePayload | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileAggregatorSum | UploadFileAggregatorAvg | UploadFileAggregatorMin | UploadFileAggregatorMax | UploadFileGroupBy | UploadFileConnectionId | UploadFileConnectionCreated_at | UploadFileConnectionUpdated_at | UploadFileConnectionName | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionWidth | UploadFileConnectionHeight | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | deleteFilePayload | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole | createUserPayload | updateUserPayload | deleteUserPayload | ComponentComponentsAdvantages | ComponentComponentsImages | ComponentPagesConfig | ComponentPagesContacts | ComponentPagesContentPage | ComponentPagesGallery | ComponentPagesLanding
 
 input InputID {
   id: ID!
@@ -985,6 +1039,7 @@ type Query {
   cart(id: ID!, publicationState: PublicationState): Cart
   carts(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState): [Cart]
   cartsConnection(sort: String, limit: Int, start: Int, where: JSON): CartConnection
+  config(publicationState: PublicationState): Config
   order(id: ID!, publicationState: PublicationState): Orders
   orders(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState): [Orders]
   ordersConnection(sort: String, limit: Int, start: Int, where: JSON): OrdersConnection
@@ -1010,6 +1065,8 @@ type Mutation {
   createCart(input: createCartInput): createCartPayload
   updateCart(input: updateCartInput): updateCartPayload
   deleteCart(input: deleteCartInput): deleteCartPayload
+  updateConfig(input: updateConfigInput): updateConfigPayload
+  deleteConfig: deleteConfigPayload
   createOrder(input: createOrderInput): createOrderPayload
   updateOrder(input: updateOrderInput): updateOrderPayload
   deleteOrder(input: deleteOrderInput): deleteOrderPayload
