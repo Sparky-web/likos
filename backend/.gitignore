@@ -138,3 +138,5 @@ front-workspace.code-workspace
 /public/uploads/*.pdf
 
 .strapi-updater.json
+
+.cache
