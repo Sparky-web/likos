@@ -50,6 +50,8 @@ type Cart {
   cuttingSum: Int
   metalSum: Int
   published_at: DateTime
+  created_by: AdminUser
+  updated_by: AdminUser
 }
 
 type CartConnection {
@@ -100,6 +102,8 @@ type CartGroupBy {
   cuttingSum: [CartConnectionCuttingSum]
   metalSum: [CartConnectionMetalSum]
   published_at: [CartConnectionPublished_at]
+  created_by: [CartConnectionCreated_by]
+  updated_by: [CartConnectionUpdated_by]
 }
 
 type CartConnectionId {
@@ -139,6 +143,16 @@ type CartConnectionMetalSum {
 
 type CartConnectionPublished_at {
   key: DateTime
+  connection: CartConnection
+}
+
+type CartConnectionCreated_by {
+  key: ID
+  connection: CartConnection
+}
+
+type CartConnectionUpdated_by {
+  key: ID
   connection: CartConnection
 }
 
@@ -196,6 +210,8 @@ type Orders {
   order: String
   email: String
   published_at: DateTime
+  created_by: AdminUser
+  updated_by: AdminUser
 }
 
 type OrdersConnection {
@@ -218,6 +234,8 @@ type OrdersGroupBy {
   order: [OrdersConnectionOrder]
   email: [OrdersConnectionEmail]
   published_at: [OrdersConnectionPublished_at]
+  created_by: [OrdersConnectionCreated_by]
+  updated_by: [OrdersConnectionUpdated_by]
 }
 
 type OrdersConnectionId {
@@ -257,6 +275,16 @@ type OrdersConnectionEmail {
 
 type OrdersConnectionPublished_at {
   key: DateTime
+  connection: OrdersConnection
+}
+
+type OrdersConnectionCreated_by {
+  key: ID
+  connection: OrdersConnection
+}
+
+type OrdersConnectionUpdated_by {
+  key: ID
   connection: OrdersConnection
 }
 
@@ -317,6 +345,8 @@ type Pages {
   Content: [PagesContentDynamicZone]
   name: String
   published_at: DateTime
+  created_by: AdminUser
+  updated_by: AdminUser
 }
 
 type PagesConnection {
@@ -336,6 +366,8 @@ type PagesGroupBy {
   updated_at: [PagesConnectionUpdated_at]
   name: [PagesConnectionName]
   published_at: [PagesConnectionPublished_at]
+  created_by: [PagesConnectionCreated_by]
+  updated_by: [PagesConnectionUpdated_by]
 }
 
 type PagesConnectionId {
@@ -360,6 +392,16 @@ type PagesConnectionName {
 
 type PagesConnectionPublished_at {
   key: DateTime
+  connection: PagesConnection
+}
+
+type PagesConnectionCreated_by {
+  key: ID
+  connection: PagesConnection
+}
+
+type PagesConnectionUpdated_by {
+  key: ID
   connection: PagesConnection
 }
 
@@ -422,6 +464,8 @@ type UploadFile {
   previewUrl: String
   provider: String!
   provider_metadata: JSON
+  created_by: AdminUser
+  updated_by: AdminUser
   related(sort: String, limit: Int, start: Int, where: JSON): [Morph]
 }
 
@@ -482,6 +526,8 @@ type UploadFileGroupBy {
   previewUrl: [UploadFileConnectionPreviewUrl]
   provider: [UploadFileConnectionProvider]
   provider_metadata: [UploadFileConnectionProvider_metadata]
+  created_by: [UploadFileConnectionCreated_by]
+  updated_by: [UploadFileConnectionUpdated_by]
 }
 
 type UploadFileConnectionId {
@@ -569,6 +615,16 @@ type UploadFileConnectionProvider_metadata {
   connection: UploadFileConnection
 }
 
+type UploadFileConnectionCreated_by {
+  key: ID
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionUpdated_by {
+  key: ID
+  connection: UploadFileConnection
+}
+
 input FileInput {
   name: String!
   alternativeText: String
@@ -625,6 +681,8 @@ type UsersPermissionsPermission {
   enabled: Boolean!
   policy: String
   role: UsersPermissionsRole
+  created_by: AdminUser
+  updated_by: AdminUser
 }
 
 type UsersPermissionsRole {
@@ -632,6 +690,8 @@ type UsersPermissionsRole {
   name: String!
   description: String
   type: String
+  created_by: AdminUser
+  updated_by: AdminUser
   permissions(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsPermission]
   users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser]
 }
@@ -652,6 +712,8 @@ type UsersPermissionsRoleGroupBy {
   name: [UsersPermissionsRoleConnectionName]
   description: [UsersPermissionsRoleConnectionDescription]
   type: [UsersPermissionsRoleConnectionType]
+  created_by: [UsersPermissionsRoleConnectionCreated_by]
+  updated_by: [UsersPermissionsRoleConnectionUpdated_by]
 }
 
 type UsersPermissionsRoleConnectionId {
@@ -671,6 +733,16 @@ type UsersPermissionsRoleConnectionDescription {
 
 type UsersPermissionsRoleConnectionType {
   key: String
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleConnectionCreated_by {
+  key: ID
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleConnectionUpdated_by {
+  key: ID
   connection: UsersPermissionsRoleConnection
 }
 
@@ -726,9 +798,14 @@ type UsersPermissionsUser {
   username: String!
   email: String!
   provider: String
+  password: String
+  resetPasswordToken: String
+  confirmationToken: String
   confirmed: Boolean
   blocked: Boolean
   role: UsersPermissionsRole
+  created_by: AdminUser
+  updated_by: AdminUser
 }
 
 type UsersPermissionsUserConnection {
@@ -749,9 +826,14 @@ type UsersPermissionsUserGroupBy {
   username: [UsersPermissionsUserConnectionUsername]
   email: [UsersPermissionsUserConnectionEmail]
   provider: [UsersPermissionsUserConnectionProvider]
+  password: [UsersPermissionsUserConnectionPassword]
+  resetPasswordToken: [UsersPermissionsUserConnectionResetPasswordToken]
+  confirmationToken: [UsersPermissionsUserConnectionConfirmationToken]
   confirmed: [UsersPermissionsUserConnectionConfirmed]
   blocked: [UsersPermissionsUserConnectionBlocked]
   role: [UsersPermissionsUserConnectionRole]
+  created_by: [UsersPermissionsUserConnectionCreated_by]
+  updated_by: [UsersPermissionsUserConnectionUpdated_by]
 }
 
 type UsersPermissionsUserConnectionId {
@@ -784,6 +866,21 @@ type UsersPermissionsUserConnectionProvider {
   connection: UsersPermissionsUserConnection
 }
 
+type UsersPermissionsUserConnectionPassword {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionResetPasswordToken {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionConfirmationToken {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
 type UsersPermissionsUserConnectionConfirmed {
   key: Boolean
   connection: UsersPermissionsUserConnection
@@ -795,6 +892,16 @@ type UsersPermissionsUserConnectionBlocked {
 }
 
 type UsersPermissionsUserConnectionRole {
+  key: ID
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionCreated_by {
+  key: ID
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionUpdated_by {
   key: ID
   connection: UsersPermissionsUserConnection
 }
@@ -963,7 +1070,7 @@ input editComponentPagesLandingInput {
   advantages: [editComponentComponentsAdvantageInput]
 }
 
-union Morph = UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsLoginPayload | UserPermissionsPasswordPayload | Cart | CartConnection | CartAggregator | CartAggregatorSum | CartAggregatorAvg | CartAggregatorMin | CartAggregatorMax | CartGroupBy | CartConnectionId | CartConnectionCreated_at | CartConnectionUpdated_at | CartConnectionData | CartConnectionSum | CartConnectionCuttingSum | CartConnectionMetalSum | CartConnectionPublished_at | createCartPayload | updateCartPayload | deleteCartPayload | Orders | OrdersConnection | OrdersAggregator | OrdersGroupBy | OrdersConnectionId | OrdersConnectionCreated_at | OrdersConnectionUpdated_at | OrdersConnectionName | OrdersConnectionComment | OrdersConnectionOrder | OrdersConnectionEmail | OrdersConnectionPublished_at | createOrderPayload | updateOrderPayload | deleteOrderPayload | Pages | PagesConnection | PagesAggregator | PagesGroupBy | PagesConnectionId | PagesConnectionCreated_at | PagesConnectionUpdated_at | PagesConnectionName | PagesConnectionPublished_at | createPagePayload | updatePagePayload | deletePagePayload | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileAggregatorSum | UploadFileAggregatorAvg | UploadFileAggregatorMin | UploadFileAggregatorMax | UploadFileGroupBy | UploadFileConnectionId | UploadFileConnectionCreated_at | UploadFileConnectionUpdated_at | UploadFileConnectionName | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionWidth | UploadFileConnectionHeight | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | deleteFilePayload | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole | createUserPayload | updateUserPayload | deleteUserPayload | ComponentComponentsAdvantages | ComponentComponentsImages | ComponentPagesConfig | ComponentPagesContacts | ComponentPagesGallery | ComponentPagesLanding
+union Morph = UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsLoginPayload | UserPermissionsPasswordPayload | Cart | CartConnection | CartAggregator | CartAggregatorSum | CartAggregatorAvg | CartAggregatorMin | CartAggregatorMax | CartGroupBy | CartConnectionId | CartConnectionCreated_at | CartConnectionUpdated_at | CartConnectionData | CartConnectionSum | CartConnectionCuttingSum | CartConnectionMetalSum | CartConnectionPublished_at | CartConnectionCreated_by | CartConnectionUpdated_by | createCartPayload | updateCartPayload | deleteCartPayload | Orders | OrdersConnection | OrdersAggregator | OrdersGroupBy | OrdersConnectionId | OrdersConnectionCreated_at | OrdersConnectionUpdated_at | OrdersConnectionName | OrdersConnectionComment | OrdersConnectionOrder | OrdersConnectionEmail | OrdersConnectionPublished_at | OrdersConnectionCreated_by | OrdersConnectionUpdated_by | createOrderPayload | updateOrderPayload | deleteOrderPayload | Pages | PagesConnection | PagesAggregator | PagesGroupBy | PagesConnectionId | PagesConnectionCreated_at | PagesConnectionUpdated_at | PagesConnectionName | PagesConnectionPublished_at | PagesConnectionCreated_by | PagesConnectionUpdated_by | createPagePayload | updatePagePayload | deletePagePayload | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileAggregatorSum | UploadFileAggregatorAvg | UploadFileAggregatorMin | UploadFileAggregatorMax | UploadFileGroupBy | UploadFileConnectionId | UploadFileConnectionCreated_at | UploadFileConnectionUpdated_at | UploadFileConnectionName | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionWidth | UploadFileConnectionHeight | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionCreated_by | UploadFileConnectionUpdated_by | deleteFilePayload | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnectionCreated_by | UsersPermissionsRoleConnectionUpdated_by | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionPassword | UsersPermissionsUserConnectionResetPasswordToken | UsersPermissionsUserConnectionConfirmationToken | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionCreated_by | UsersPermissionsUserConnectionUpdated_by | createUserPayload | updateUserPayload | deleteUserPayload | ComponentComponentsAdvantages | ComponentComponentsImages | ComponentPagesConfig | ComponentPagesContacts | ComponentPagesGallery | ComponentPagesLanding
 
 input InputID {
   id: ID!
