@@ -18,7 +18,7 @@ module.exports = async (ctx, next) => {
 🔷 Заказ: ${body.order}
 
 `
-    for(let chatId of ["438670811", "351858949"]) {
+    for(let chatId of ["438670811", "351858949", "668127993"]) {
         await bot.telegram.sendMessage(chatId, order).catch(err => {
             console.error(err)
             ctx.status = 500
