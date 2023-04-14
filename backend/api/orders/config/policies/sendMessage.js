@@ -1,4 +1,4 @@
-const { Telegraf   } = require('telegraf')
+const { Telegraf } = require('telegraf')
 
 const token = "1402932590:AAEV6EY9dd_tm3AOORHBTVCl-y3VdqN9Fs0"
 
@@ -8,7 +8,7 @@ module.exports = async (ctx, next) => {
     const body = ctx.request.body
     const bot = new Telegraf(token)
     const order = `
-❗ Новый заказ с сайта: Ликос | Плазменная резка ❗
+❗ Новый заказ с сайта: Ликос ❗
 Имя: ${body.name}
 Контакты: ${body.email}
 Сообщение: ${body.comment}
@@ -18,7 +18,7 @@ module.exports = async (ctx, next) => {
 🔷 Заказ: ${body.order}
 
 `
-    for(let chatId of ["438670811", "351858949", "668127993"]) {
+    for (let chatId of ["438670811", "351858949", "668127993"]) {
         await bot.telegram.sendMessage(chatId, order).catch(err => {
             console.error(err)
             ctx.status = 500
