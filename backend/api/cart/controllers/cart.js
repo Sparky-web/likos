@@ -70,7 +70,7 @@ module.exports = {
 
     const {data: res} = await axios({
       method: 'post',
-      url: 'http://localhost:1337/upload',
+      url: `http://127.0.0.1:${process.env.PORT}/upload`,
       data: formData,
       headers: {'Content-Type': `multipart/form-data;boundary=${formData._boundary}`}
     })
